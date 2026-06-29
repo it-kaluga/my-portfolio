@@ -1,0 +1,92 @@
+ss /* Общие стили для центрирования элементов на странице */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    user-select: none; /* Запрещаем выделение текста при частых кликах */
+}
+
+
+.container {
+    margin: 0 auto; /* Центрируем контейнер по горизонтали */
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #00796b;
+    margin-bottom: 10px;
+}
+
+.score-board {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Кнопка старта */
+#start-btn {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    transition: 0.2s;
+}
+
+#start-btn:hover {
+    background-color: #45a049;
+}
+
+#start-btn:active {
+    transform: scale(0.95);
+}
+
+/* Игровое поле 3х3 на Flexbox */
+.grid {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
+    width: 320px;    /* Ширина поля (3 норки по 90px + отступы) */
+    height: 320px;
+    background-color: #8bc34a; /* Зеленая поляна */
+    border: 8px solid #558b2f;
+    border-radius: 15px;
+    padding: 10px;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+/* Норка */
+.hole {
+    width: 90px;
+    height: 90px;
+    background-color: #795548; /* Коричневая земля */
+    border: 4px solid #5d4037;
+    border-radius: 50%; /* Делаем круглым */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px; /* Размер эмодзи Маши */
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+/* Эффект нажатия на норку */
+.hole:active {
+    transform: scale(0.9);
+}
