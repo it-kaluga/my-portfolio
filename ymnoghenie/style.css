@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+font-family: Arial, sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+/* Фоновое изображение из папки image */
+background-image: url('image/class.jpg'); /* замените your-image.jpg на имя вашего файла */
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+/* Дополнительный фоновый цвет на случай, если картинка не загрузится */
+background-color: #f0f8ff;
+}
+
+.container {
+text-align: center;
+background: white;
+padding: 80px;
+border-radius: 40px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+max-width: 600px;
+}
+
+h1 {
+color: #2c3e50;
+margin-bottom: 20px;
+}
+
+.example {
+font-size: 28px;
+margin: 20px 0;
+color: #34495e;
+}
+
+#userAnswer {
+width: 80px;
+height: 40px;
+font-size: 22px;
+text-align: center;
+border: 2px solid #3498db;
+border-radius: 5px;
+margin-left: 10px;
+}
+
+button {
+background-color: #3498db;
+color: white;
+border: none;
+padding: 12px 24px;
+margin: 10px 5px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 16px;
+transition: background-color 0.3s;
+}
+
+button:hover {
+background-color: #2980b9;
+}
+
+#newExampleBtn {
+background-color: #2ecc71;
+}
+
+#newExampleBtn:hover {
+background-color: #27ae60;
+}
+
+
+
+/* Класс для скрытия элементов */
+.hidden {
+    display: none;
+}
+
+#result {
+margin-top: 20px;
+font-size: 18px;
+font-weight: bold;
+min-height: 24px;
+}
+
+.correct {
+color: #2ecc71;
+}
+
+.incorrect {
+color: #e74c3c;
+}
+
+#stats {
+font-size: 16px;
+margin: 20px 0 10px;
+padding: 12px 15px;
+background-color: #e8f4fd;
+border-radius: 8px;
+text-align: center;
+border: 1px solid #b3d9ff;
+color: #2c3e50;
+}
+
+#correctCount {
+font-weight: bold;
+color: #27ae60;
+font-size: 18px;
+}
+
+#totalCount {
+font-weight: bold;
+color: #34495e;
+font-size: 18px;
+}
