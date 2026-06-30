@@ -7,12 +7,12 @@ const startBtn = document.querySelector('#start-btn');
 
 let score = 0;
 let lastHole;
-export let timeUp = false; // Закончилась ли игра
-export let moleTimer;      // Таймер появления хомяка
+let timeUp = false; // Закончилась ли игра
+let moleTimer;      // Таймер появления хомяка
 let gameTimer;      // Общий таймер игры
 
 // 1. Функция для выбора случайной норки (чтобы хомяк не появлялся в одной и той же дважды подряд)
-export function randomHole(holes) {
+function randomHole(holes) {
     const index = Math.floor(Math.random() * holes.length);
     const hole = holes[index];
     if (hole === lastHole) {
@@ -24,7 +24,7 @@ export function randomHole(holes) {
 const { randomHole, holes, moleTimer, timeUp } = require("./script");
 
 // 2. Функция появления хомяка 🐻👩🏼‍🦱🐹😈
-export function peep() {
+function peep() {
     // Хомяк будет показываться на случайное время от 600 до 1200 миллисекунд (0.6 - 1.2 сек)
     const time = Math.round(Math.random() * (1200 - 600) + 600);
     const hole = randomHole(holes);
