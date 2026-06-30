@@ -1,7 +1,7 @@
 const { peep } = require("./peep");
 
 // Находим нужные элементы на странице
-export const holes = document.querySelectorAll('.hole');
+const holes = document.querySelectorAll('.hole');
 const scoreBoard = document.querySelector('#score');
 const startBtn = document.querySelector('#start-btn');
 
